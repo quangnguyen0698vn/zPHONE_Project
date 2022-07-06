@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <jsp:include page="cssFramework.jsp"/>
+  	<!-- Bootstrap and Fontawesome -->
+    <jsp:include page='../common/cssFramework.jsp'/>
     <title>ZPHone Dashboard</title>
   </head>
 
@@ -134,10 +135,11 @@
     <!-- ADD USER MODAL -->
     <jsp:include page="addUserModal.jsp" />
 
-    <!-- Bootstrap, FontAweSome and Jquery script -->
-    <jsp:include page="javascriptFramework.jsp"/>
+	<!-- Bootstrap, FontAweSome and Jquery script -->
+	<jsp:include
+		page='../common/javascriptFramework.jsp' />
 
-    <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+	<script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 
     <script>
       CKEDITOR.replace("editor1");

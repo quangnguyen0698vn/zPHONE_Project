@@ -15,16 +15,16 @@ import model.Account;
 
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	public LoginServlet() {
 	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
-		
-		
+
 		request.getSession(true).invalidate();
 
 		// collect data from a login form
@@ -35,34 +35,33 @@ public class LoginServlet extends HttpServlet {
 		Account account = new Account();
 		account.setName(user);
 		account.setPwd(password);
-		
+
 		// make sure that email is valid
 		String regexMail = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
 		String regexPassword = "[a-zA-Z0-9_!@#$%^&*]+";
 		HttpSession session = request.getSession(true);
-		
-		
+
 		if (!password.matches(regexPassword) || !user.matches(regexMail)) {
 			session.setAttribute("error", "invalid syntax");
 			response.sendRedirect("login.jsp");
 			return;
 		}
-		
+
 		// read information of account in web.xml
 		String uid = getServletContext().getInitParameter("username");
 		String pwd = getServletContext().getInitParameter("password");
-		
+
 		if (rememberMe) {
 			// set cookie
 			Cookie loginCookie = new Cookie("loggedInUser", user);
 			// set life span... total number of seconds
 			// I setup as 7 days
-			loginCookie.setMaxAge(60*60*24*7);
+			loginCookie.setMaxAge(60 * 60 * 24 * 7);
 			// send cookie to browser
 			response.addCookie(loginCookie);
 		}
-		
-		if (user != null && account.getPwd().equals(pwd) && account.getName().equalsIgnoreCase(uid)) {	
+
+		if (user != null && account.getPwd().equals(pwd) && account.getName().equalsIgnoreCase(uid)) {
 			// set session
 			session.setAttribute("user", user);
 			// login is valid, now redirect to index page of admin
