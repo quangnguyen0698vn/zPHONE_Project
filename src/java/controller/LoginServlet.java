@@ -52,16 +52,17 @@ public class LoginServlet extends HttpServlet {
 		String uid = getServletContext().getInitParameter("username");
 		String pwd = getServletContext().getInitParameter("password");
 		
-		if (user != null && account.getPwd().equals(pwd) && account.getName().equalsIgnoreCase(uid)) {
-			if (rememberMe) {
-				// set cookie
-				Cookie loginCookie = new Cookie("loggedInUser", user);
-				// set life span... total number of seconds
-				// set 120s for easily testing the app
-				loginCookie.setMaxAge(60*2);
-				// send cookie to browser
-				response.addCookie(loginCookie);
-			}
+		if (rememberMe) {
+			// set cookie
+			Cookie loginCookie = new Cookie("loggedInUser", user);
+			// set life span... total number of seconds
+			// I setup as 7 days
+			loginCookie.setMaxAge(60*60*24*7);
+			// send cookie to browser
+			response.addCookie(loginCookie);
+		}
+		
+		if (user != null && account.getPwd().equals(pwd) && account.getName().equalsIgnoreCase(uid)) {	
 			// set session
 			session.setAttribute("user", user);
 			// login is valid, now redirect to index page of admin

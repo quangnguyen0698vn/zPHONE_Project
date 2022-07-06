@@ -27,16 +27,6 @@ public class LogoutServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession(true);
 		session.invalidate();
-//		String user = (String) session.getAttribute("user");
-//		System.out.println(user);
-		
-	
-		// expire the cookie
-		Cookie cookie = new Cookie("loggedInUser", null);
-		cookie.setMaxAge(0);
-        response.addCookie(cookie);
-		
-		// redirect to homepage
 		response.sendRedirect(request.getContextPath() + "/home.jsp");
 	}
 }

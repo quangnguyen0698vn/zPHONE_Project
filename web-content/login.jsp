@@ -5,21 +5,22 @@
 	request.getSession(true);
 	// Get the user object
 	String user = (String) session.getAttribute("user");
-	if (user == null) {
+	// if user is not null, redirect to the admin dashboard
+	if (user != null) {
+		// request.getRequestDispatcher("admin/index.jsp").forward(request, response);
+		response.sendRedirect("admin/index.jsp");
+	} else {
 		Cookie[] cookies = request.getCookies();
 		if (cookies != null) {
 			for(Cookie cookie : cookies) {
 				if (cookie.getName().equals("loggedInUser")) {		
 					user = (String) cookie.getValue();
-					session.setAttribute("user", user);
+					// System.out.println("Cookie is loaded");
+					break;
 				}
 			}
 		}
-	}
-	// if user is not null, redirect to the admin dashboard
-	if (user != null) {
-		// request.getRequestDispatcher("admin/index.jsp").forward(request, response);
-		response.sendRedirect("admin/index.jsp");
+		user = (user == null) ? "" : user;
 	}
 %>
     
@@ -74,6 +75,7 @@
                   name="username"
                   class="form-control"
                   placeholder="Username"
+                  value="<%=user%>"
                 />
               </div>
               <div class="col-12">
