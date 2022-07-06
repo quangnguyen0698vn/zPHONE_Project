@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="PRJ321x_Project_2_quangnnFX16178">
+        <wb-resource deploy-path="/" source-path="/web-content" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/java"/>
+        <property name="context-root" value="PRJ321x_Project_2_quangnnFX16178"/>
+        <property name="java-output-path" value="/PRJ321x_Project_2_quangnnFX16178/build/classes"/>
+    </wb-module>
+</project-modules>

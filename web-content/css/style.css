@@ -1,0 +1,38 @@
+/* HOME */
+@media (min-width: 768px) {
+  #navbarBlock .btn {
+    margin-left: auto;
+  }
+}
+
+
+@media(max-width: 768px) {
+
+  #navbarBlock .btn {
+    margin-top: 0.5rem;
+  }
+
+  #navbarBlock .navbar-brand {
+    display: none;
+  }
+
+  #navbarBlock div {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media(max-width: 576px) {
+  img {
+    max-width: 50% !important;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.img-best-seller {
+  max-width: 50%;
+  height: auto;
+  margin: auto;
+}
+
