@@ -33,8 +33,7 @@ if (user != null) {
 <title>ZPHone - Điện thoại giá rẻ</title>
 
 <!-- Bootstrap and Font Awesome -->
-<jsp:include
-	page="common/cssFramework.jsp" />
+<jsp:include page="common/cssFramework.jsp" />
 <!-- My Own style -->
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/login-style.css" />
@@ -66,8 +65,8 @@ if (user != null) {
 						<div class="col-12">
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox"
-									name="rememberMe" /> <label
-									class="form-check-label" for="rememberMe"> Remember me</label>
+									name="rememberMe" /> <label class="form-check-label"
+									for="rememberMe"> Remember me</label>
 							</div>
 						</div>
 						<%
@@ -98,8 +97,13 @@ if (user != null) {
 	<jsp:include page="footer.jsp" />
 
 	<!-- Bootstrap, FontAweSome and Jquery script -->
-	<jsp:include
-		page="common/javascriptFramework.jsp" />
+	<jsp:include page="common/javascriptFramework.jsp" />
+
+	<!-- JQuery Validator -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+		integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="js/login-app.js"></script>
 </body>
 </html>

@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 <!-- Bootstrap and Fontawesome -->
-    <jsp:include page='../common/cssFramework.jsp'/>
-<!-- My Own style -->
-<link rel="stylesheet" href="..css/admin-style.css" />
+<jsp:include page='../common/cssFramework.jsp' />
+
 <title>ZPHone Dashboard - Products</title>
 </head>
 
@@ -75,8 +74,8 @@
 										<td class="align-middle">July 5 2022</td>
 										<td class="align-middle"><a href="#"
 											class="btn btn-secondary" data-bs-toggle="modal"
-											data-bs-target="#addPostModal">
-												<i class="fas fa-pencil-alt"></i> Edit
+											data-bs-target="#addPostModal"> <i
+												class="fas fa-pencil-alt"></i> Edit
 										</a></td>
 									</tr>
 								</tbody>
@@ -110,8 +109,7 @@
 	<!-- FOOTER -->
 	<jsp:include page="footer.jsp" />
 	<!-- Bootstrap, FontAweSome and Jquery script -->
-	<jsp:include
-		page='../common/javascriptFramework.jsp' />
+	<jsp:include page='../common/javascriptFramework.jsp' />
 
 	<script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 
