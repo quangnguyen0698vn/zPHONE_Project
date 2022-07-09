@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
   <div class="container">
-    <a href="<%=request.getContextPath()%>/home.jsp" class="navbar-brand">Zphone</a>
+    <a href="<%=request.getContextPath()%>" class="navbar-brand">Zphone</a>
     <button
       class="navbar-toggler"
       data-bs-toggle="collapse"
@@ -14,7 +14,7 @@
     >
       <ul class="navbar-nav">
         <li class="nav-item px-2">
-          <a href="index.jsp" class="nav-link active">Dashboard</a>
+          <a href="home" class="nav-link active">Dashboard</a>
         </li>
 
         <li class="nav-item px-2">
@@ -33,11 +33,11 @@
             class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
           >
-            <i class="fas fa-user"></i> Welcome <%= (String) session.getAttribute("user") %>
+            <i class="fas fa-user"></i> Welcome <%= (String) session.getAttribute("email") %>
           </a>
         </li>
         <li class="nav-item">
-          <a href="<%= request.getContextPath() + "/logout" %>" class="nav-link">
+          <a href="<%=request.getContextPath()%>/logout" class="nav-link">
             <i class="fas fa-user-times"></i> Logout
           </a>
         </li>

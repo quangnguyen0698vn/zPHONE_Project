@@ -1,28 +1,28 @@
 package model;
 
 public class Account {
-	private String usr, pwd;
+	private String email, password;
 	private int role;
 	private String name, address, phone;
 	private int check;
-	
+
 	public Account() {
 	}
 
-	public String getUsr() {
-		return usr;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsr(String usr) {
-		this.usr = usr;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getPwd() {
-		return pwd;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public int getRole() {
@@ -64,6 +64,5 @@ public class Account {
 	public void setCheck(int check) {
 		this.check = check;
 	}
-	
-	
+
 }

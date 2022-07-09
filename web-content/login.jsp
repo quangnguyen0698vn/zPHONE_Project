@@ -55,8 +55,8 @@ if (user != null) {
 						method="POST" class="row g-3" id="loginForm">
 						<h4>Welcome Back</h4>
 						<div class="col-12">
-							<label>Username</label> <input type="text" name="username"
-								class="form-control" placeholder="Username" value="<%=user%>" />
+							<label>Username</label> <input type="text" name="email"
+								class="form-control" placeholder="email" value="<%=user%>" />
 						</div>
 						<div class="col-12">
 							<label>Password</label> <input type="password" name="password"
@@ -86,7 +86,7 @@ if (user != null) {
 					<hr class="mt-4" />
 					<div class="col-12">
 						<p class="text-center mb-0">
-							Have not account yet? <a href="#">Signup</a>
+							Have not account yet? Go back to the homepage and <a href="home">Signup</a>
 						</p>
 					</div>
 				</div>
